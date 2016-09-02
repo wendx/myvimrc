@@ -55,6 +55,7 @@ hi Search ctermbg=5 ctermfg=yellow
 set number
 set incsearch
 set hlsearch
+set ic
 
 " key map
 let mapleader=","
@@ -66,6 +67,8 @@ nmap <leader>fq :NERDTreeClose<CR>
 nmap <leader>cj :cn<cr>
 nmap <leader>ck :cp<cr>
 nmap <leader>cw :cw 10<cr>
+nmap <leader>ic :set ic<cr>
+nmap <leader>nic :set noic<cr>
 
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
