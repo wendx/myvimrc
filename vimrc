@@ -40,6 +40,7 @@ Plugin 'https://github.com/altercation/vim-colors-solarized'
 Plugin 'https://github.com/tomasr/molokai'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -126,4 +127,9 @@ syntax enable
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+
+" setting for vim-cpp-enhanced-highlight
+let g:cpp_class_scope_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+
 
