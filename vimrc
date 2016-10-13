@@ -38,7 +38,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'https://github.com/rking/ag.vim'
 Plugin 'https://github.com/altercation/vim-colors-solarized'
 Plugin 'https://github.com/tomasr/molokai'
-Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -75,6 +76,8 @@ nmap <leader>cw :cw 10<cr>
 nmap <leader>ic :set ic<cr>
 nmap <leader>nic :set noic<cr>
 nmap <leader>nw <C-w>w
+nmap <leader>fz :FZF<cr>
+nmap <leader>ft :BTags<cr>
 
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
