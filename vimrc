@@ -35,12 +35,12 @@ Plugin 'https://github.com/vim-scripts/TagHighlight.git'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'https://github.com/rking/ag.vim'
 Plugin 'https://github.com/altercation/vim-colors-solarized'
 Plugin 'https://github.com/tomasr/molokai'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'https://github.com/rking/ag.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -79,6 +79,7 @@ nmap <leader>nic :set noic<cr>
 nmap <leader>nw <C-w>w
 nmap <leader>fz :FZF<cr>
 nmap <leader>ft :BTags<cr>
+nmap <leader>mc :MarkClear<cr>
 
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
