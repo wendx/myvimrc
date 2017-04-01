@@ -41,6 +41,11 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'https://github.com/rking/ag.vim'
+Plugin 'kshenoy/vim-signature'
+Plugin 'bsdelf/bufferhint'
+Plugin 'justinmk/vim-sneak'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-expand-region'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,8 +83,21 @@ nmap <leader>ic :set ic<cr>
 nmap <leader>nic :set noic<cr>
 nmap <leader>nw <C-w>w
 nmap <leader>fz :FZF<cr>
+nmap <leader>ff :FZF 
 nmap <leader>ft :BTags<cr>
 nmap <leader>mc :MarkClear<cr>
+nnoremap - :call bufferhint#Popup()<CR>
+map K <Plug>(expand_region_expand)
+map J <Plug>(expand_region_shrink)
+
+"repeating last command-line
+map <leader>rd @:
+
+"复制/粘贴命令：
+"复制选中的内容到寄存器x
+"粘贴寄存器x的内容并且移动光标到粘贴内容之后
+map <leader>c "xy
+map <leader>v "xgp
 
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
@@ -133,4 +151,8 @@ colorscheme solarized
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 
+"color setting for vim-signature
+hi SignColumn guibg=none
+hi SignColumn ctermbg=none
+hi SignatureMarkText ctermbg=none
 
