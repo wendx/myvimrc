@@ -110,6 +110,7 @@ map <Leader><leader>. <Plug>(easymotion-repeat)
 
 Plugin 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
+let g:NERDAltDelims_c = 1
 
 Plugin 'dkprice/vim-easygrep'
 
