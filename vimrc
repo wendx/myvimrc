@@ -46,6 +46,8 @@ Plugin 'bsdelf/bufferhint'
 Plugin 'justinmk/vim-sneak'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'terryma/vim-expand-region'
+Plugin 'inkarkat/vim-mark'
+Plugin 'inkarkat/vim-ingo-library'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
