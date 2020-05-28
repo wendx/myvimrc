@@ -161,3 +161,4 @@ hi SignColumn guibg=none
 hi SignColumn ctermbg=none
 hi SignatureMarkText ctermbg=none
 
+set colorcolumn=80
