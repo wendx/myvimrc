@@ -130,11 +130,15 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 " tabline中buffer显示编号
 let g:airline#extensions#tabline#buffer_nr_show = 1
+" 关闭状态显示空白符号计数
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#whitespace#symbol = '!'
 " 映射切换buffer的键位
 nnoremap [b :bp<CR>
 nnoremap ]b :bn<CR>
 "设置tab键映射"
 nmap <tab> :bn<cr>
+nmap <s-tab> :bp<cr>
 " 映射<leader>num到num buffer
 map <leader>1 :b 1<CR>
 map <leader>2 :b 2<CR>
