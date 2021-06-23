@@ -164,8 +164,8 @@ let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 
 "color setting for vim-signature
-hi SignColumn guibg=none
-hi SignColumn ctermbg=none
-hi SignatureMarkText ctermbg=none
+hi SignColumn guibg=NONE
+hi SignColumn ctermbg=NONE
+hi SignatureMarkText ctermbg=NONE
 
 set colorcolumn=81
