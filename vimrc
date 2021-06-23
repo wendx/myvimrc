@@ -48,6 +48,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'terryma/vim-expand-region'
 Plugin 'inkarkat/vim-mark'
 Plugin 'inkarkat/vim-ingo-library'
+Plugin 'ntpeters/vim-better-whitespace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
