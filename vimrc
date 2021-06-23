@@ -26,7 +26,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 	"Plugin 'ascenator/L9', {'name': 'newL9'}
-	
+
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plugin 'https://github.com/majutsushi/tagbar.git'
@@ -168,4 +168,4 @@ hi SignColumn guibg=none
 hi SignColumn ctermbg=none
 hi SignatureMarkText ctermbg=none
 
-set colorcolumn=80
+set colorcolumn=81
