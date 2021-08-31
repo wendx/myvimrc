@@ -1,9 +1,27 @@
-1、搭建vim环境，下载vimrc配置：<br />
-git clone https://github.com/wendx/myvimrc.git ~/myvimrc/<br />
-cp ~/myvimrc/vimrc ~/.vimrc<br />
-<br />
-2、用Vundle来管理vim的插件：<br />
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim<br />
-然后打开vim，执行命令&quot;:BundleInstall&quot;或&quot;:PluginInstall&quot;，就可以自动安装配置好的插件了。<br />
-<br />
-3、等待插件安装完成！Enjoy it！
+## 下载配置文件
+
+下载仓库并将配置文件拷贝到对应目录：
+
+```
+git clone https://github.com/wendx/myvimrc.git ~/myvimrc/
+cp ~/myvimrc/vimrc ~/.vimrc
+cp ~/myvimrc/inputrc ~/.inputrc
+```
+
+## 下载Vim Bundle用来管理插件
+
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+## 安装插件
+
+打开vim，执行以下命令安装配置插件。
+
+```
+:PluginInstall
+```
+
+## 等待插件安装完成
+
+Enjoy it！
