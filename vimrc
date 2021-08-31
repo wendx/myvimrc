@@ -99,6 +99,9 @@ map J <Plug>(expand_region_shrink)
 "repeating last command-line
 map <leader>rd @:
 
+"to use terminal in VIM, you need VIM 8.1 or later
+nmap <leader>sh :vert term++close<cr>
+
 "复制/粘贴命令：
 "复制选中的内容到寄存器x
 "粘贴寄存器x的内容并且移动光标到粘贴内容之后
