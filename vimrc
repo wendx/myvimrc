@@ -49,6 +49,8 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'inkarkat/vim-mark'
 Plugin 'inkarkat/vim-ingo-library'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'gcmt/wildfire.vim'
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -186,6 +188,9 @@ let g:cpp_experimental_template_highlight = 1
 hi SignColumn guibg=NONE
 hi SignColumn ctermbg=NONE
 hi SignatureMarkText ctermbg=NONE
+
+" setting for wildfire, selects the next closest text object
+map <SPACE> <Plug>(wildfire-fuel)
 
 set colorcolumn=81
 
