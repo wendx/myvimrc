@@ -1,71 +1,44 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+call plug#begin()
+" The default plugin directory will be as follows:
+"   - Vim (Linux/macOS): '~/.vim/plugged'
+"   - Vim (Windows): '~/vimfiles/plugged'
+"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
+" You can specify a custom plugin directory by passing it as the argument
+"   - e.g. `call plug#begin('~/.vim/plugged')`
+"   - Avoid using standard Vim directory names like 'plugin'
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+Plug 'https://github.com/scrooloose/nerdtree.git'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+Plug 'https://github.com/majutsushi/tagbar.git'
+Plug 'https://github.com/vim-scripts/c.vim.git'
+Plug 'https://github.com/vim-scripts/TagHighlight.git'
+Plug 'easymotion/vim-easymotion'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'https://github.com/altercation/vim-colors-solarized'
+Plug 'https://github.com/tomasr/molokai'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'https://github.com/rking/ag.vim'
+Plug 'kshenoy/vim-signature'
+Plug 'bsdelf/bufferhint'
+Plug 'justinmk/vim-sneak'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-expand-region'
+Plug 'inkarkat/vim-mark'
+Plug 'inkarkat/vim-ingo-library'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'gcmt/wildfire.vim'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdcommenter'
+Plug 'dkprice/vim-easygrep'
+Plug 'skywind3000/vim-auto-popmenu'
+Plug 'skywind3000/vim-dict'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-	"Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-	"Plugin 'L9'
-" Git plugin not hosted on GitHub
-	"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-	"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-	"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-	"Plugin 'ascenator/L9', {'name': 'newL9'}
-
-Plugin 'https://github.com/scrooloose/nerdtree.git'
-Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
-Plugin 'https://github.com/majutsushi/tagbar.git'
-Plugin 'https://github.com/vim-scripts/c.vim.git'
-Plugin 'https://github.com/vim-scripts/TagHighlight.git'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'https://github.com/altercation/vim-colors-solarized'
-Plugin 'https://github.com/tomasr/molokai'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plugin 'junegunn/fzf.vim'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'https://github.com/rking/ag.vim'
-Plugin 'kshenoy/vim-signature'
-Plugin 'bsdelf/bufferhint'
-Plugin 'justinmk/vim-sneak'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'terryma/vim-expand-region'
-Plugin 'inkarkat/vim-mark'
-Plugin 'inkarkat/vim-ingo-library'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'gcmt/wildfire.vim'
-Plugin 'tpope/vim-surround'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" Initialize plugin system
+call plug#end()
+" ===================================
 
 hi Search ctermbg=5 ctermfg=yellow
 set number
@@ -119,11 +92,9 @@ map <Leader><leader>l <Plug>(easymotion-lineforward)
 " 重复上一次操作, 类似repeat插件, 很强大
 map <Leader><leader>. <Plug>(easymotion-repeat)
 
-Plugin 'scrooloose/nerdcommenter'
+" ----------------- nerdcommenter ----------------
 let g:NERDSpaceDelims = 1
 let g:NERDAltDelims_c = 1
-
-Plugin 'dkprice/vim-easygrep'
 
 "---------------------------- airline 设置 start------------------------------
 " 显示颜色
@@ -160,8 +131,6 @@ map <leader>8 :b 8<CR>
 map <leader>9 :b 9<CR>
 " ----------------------------airline 设置 end------------------------------
 " ----------------- vim-auto-popmenu --------------------
-Plugin 'skywind3000/vim-auto-popmenu'
-Plugin 'skywind3000/vim-dict'
 " 设定需要生效的文件类型，如果是 '*' 的话，代表所有类型
 let g:apc_enable_ft = {'text':1, 'markdown':1, 'c':1, 'cpp':1, 'h':1}
 
