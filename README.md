@@ -43,6 +43,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 :PlugUpdate
 ```
 
+卸载在vimrc中删除或者注释掉的插件：
+
+```
+:PlugClean
+```
+
 ## 等待插件安装完成
 
 Enjoy it！
