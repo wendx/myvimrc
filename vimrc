@@ -35,6 +35,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'dkprice/vim-easygrep'
 Plug 'skywind3000/vim-auto-popmenu'
 Plug 'skywind3000/vim-dict'
+Plug 'airblade/vim-gitgutter'
 
 " Initialize plugin system
 call plug#end()
@@ -161,7 +162,11 @@ hi SignatureMarkText ctermbg=NONE
 " setting for wildfire, selects the next closest text object
 map <SPACE> <Plug>(wildfire-fuel)
 
+" not remap tab
+let g:apc_enable_tab = get(g:, 'apc_enable_tab', 0)
+
 set colorcolumn=81
+set updatetime=300
 
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 set enc=utf8
